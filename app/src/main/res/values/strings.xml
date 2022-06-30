@@ -1,0 +1,27 @@
+<resources>
+    <!--App-->
+    <string name="app_name">Users CRUD App</string>
+
+    <!--TextView-->
+    <string name="create_user">Create User</string>
+    <string name="users_created">Users Created:</string>
+    <string name="add_success">User added successfully</string>
+    <string name="add_error">User already exists</string>
+    <string name="delete_success">User deleted successfully</string>
+    <string name="delete_error">User does not exits</string>
+    <string name="update_success">User updated successfully</string>
+
+    <!--EditText-->
+    <string name="first_name">First Name</string>
+    <string name="last_name">Last Name</string>
+    <string name="age">Age</string>
+    <string name="e_mail">E-mail</string>
+
+    <!--Button-->
+    <string name="add_user">Add User</string>
+    <string name="delete_user">Delete User</string>
+    <string name="update_user">Update User</string>
+    <string name="cancel">Cancel</string>
+    <string name="save">Save</string>
+
+</resources>
