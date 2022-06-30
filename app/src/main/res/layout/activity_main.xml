@@ -139,6 +139,7 @@
         app:layout_constraintGuide_percent="0.7" />
 
     <androidx.appcompat.widget.LinearLayoutCompat
+        android:id="@+id/linearLayoutCompat"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
@@ -149,15 +150,43 @@
         <androidx.appcompat.widget.AppCompatTextView
             android:layout_width="wrap_content"
             android:layout_height="match_parent"
-            android:text="@string/users_created"
+            android:text="@string/users_active"
             android:textColor="@color/white"
             android:textSize="18sp" />
 
         <androidx.appcompat.widget.AppCompatTextView
-            android:id="@+id/usersCount"
+            android:id="@+id/activeUsersCount"
             android:layout_width="wrap_content"
             android:layout_height="match_parent"
             android:layout_marginStart="4dp"
+            android:text="0"
+            android:textColor="@color/white"
+            android:textSize="18sp" />
+
+    </androidx.appcompat.widget.LinearLayoutCompat>
+
+    <androidx.appcompat.widget.LinearLayoutCompat
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:orientation="horizontal"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/linearLayoutCompat">
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:text="@string/users_deleted"
+            android:textColor="@color/white"
+            android:textSize="18sp" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/deletedUsersCount"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_marginStart="4dp"
+            android:text="0"
             android:textColor="@color/white"
             android:textSize="18sp" />
 

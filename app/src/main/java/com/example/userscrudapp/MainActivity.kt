@@ -30,7 +30,7 @@ class MainActivity : AppCompatActivity() {
             if (!areLinesEmpty(binding.editTextContainer) && isEmailValid(binding.emailEditText.text.toString())) {
                 if (addUser(getCurrentUser())) {
                     setMessage(resources.getString(R.string.add_success), isPositive = true)
-                    updateUsersCounter()
+                    updateActiveUsersCounter()
                     clearLines(binding.editTextContainer)
                 } else {
                     setMessage(resources.getString(R.string.add_error), isPositive = false)
@@ -42,7 +42,8 @@ class MainActivity : AppCompatActivity() {
             if (!areLinesEmpty(binding.editTextContainer) && isEmailValid(binding.emailEditText.text.toString())) {
                 if (deleteUser(getCurrentUser())) {
                     setMessage(resources.getString(R.string.delete_success), isPositive = true)
-                    updateUsersCounter()
+                    updateActiveUsersCounter()
+                    updateDeletedUsersCounter()
                     clearLines(binding.editTextContainer)
                 } else {
                     setMessage(resources.getString(R.string.delete_error), isPositive = false)
@@ -120,7 +121,12 @@ class MainActivity : AppCompatActivity() {
         updateUserDialog.show()
     }
 
-    private fun updateUsersCounter() {
-        binding.usersCount.text = usersList.size.toString()
+    private fun updateActiveUsersCounter() {
+        binding.activeUsersCount.text = usersList.size.toString()
+    }
+
+    private fun updateDeletedUsersCounter() {
+        val currentCount = binding.deletedUsersCount.text.toString().toInt()
+        binding.deletedUsersCount.text = (currentCount + 1).toString()
     }
 }

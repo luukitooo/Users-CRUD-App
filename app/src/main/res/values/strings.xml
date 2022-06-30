@@ -4,7 +4,8 @@
 
     <!--TextView-->
     <string name="create_user">Create User</string>
-    <string name="users_created">Users Created:</string>
+    <string name="users_active">Users Active:</string>
+    <string name="users_deleted">Users Deleted:</string>
     <string name="add_success">User added successfully</string>
     <string name="add_error">User already exists</string>
     <string name="delete_success">User deleted successfully</string>
